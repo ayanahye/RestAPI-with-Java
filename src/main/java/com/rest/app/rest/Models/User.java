@@ -1,13 +1,13 @@
 package com.rest.app.rest.Models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table
 public class User {
 
     // id will be unique for each user
+    // it will identify each user hence IDENTITY
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
